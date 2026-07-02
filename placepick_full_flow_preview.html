@@ -1,0 +1,244 @@
+<div style="display:flex;justify-content:center;padding:1rem 0;background:var(--surface-1);border-radius:12px;">
+<div id="phone" style="width:340px;min-height:660px;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:12px;display:flex;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1A1A1A;position:relative;overflow:hidden;">
+<div style="display:flex;justify-content:space-between;padding:10px 18px 0;font-size:13px;font-weight:600;">
+<span>9:41</span>
+<span style="display:flex;gap:4px;align-items:center;"><i class="ti ti-antenna-bars-5" style="font-size:14px"></i><i class="ti ti-wifi" style="font-size:14px"></i><i class="ti ti-battery-4" style="font-size:14px"></i></span>
+</div>
+
+<div id="screen-splash" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;">
+<div style="width:64px;height:64px;border:1px solid #D9D9D9;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><i class="ti ti-photo-x" style="font-size:28px;color:#B4B2A9"></i></div>
+<p style="font-weight:700;font-size:15px;margin:0;">PlacePick</p>
+<div style="text-align:center;margin-top:80px;">
+<p style="font-size:11.5px;color:#B0B0B0;margin:0 0 8px;">당신을 위한 최적의 공간 선택</p>
+<div style="display:flex;justify-content:center;gap:5px;"><span style="width:5px;height:5px;border-radius:50%;background:#B0B0B0;"></span><span style="width:5px;height:5px;border-radius:50%;background:#B0B0B0;"></span><span style="width:5px;height:5px;border-radius:50%;background:#B0B0B0;"></span></div>
+</div>
+</div>
+
+<div id="screen-login" style="display:none;flex:1;flex-direction:column;align-items:center;padding:56px 24px 0;">
+<p style="font-weight:700;font-size:18px;margin:4px 0 4px;">PlacePick</p>
+<p style="font-size:12.5px;color:#8A8A8A;margin:0 0 28px;">당신만의 인생 맛집을 찾아보세요</p>
+<input id="loginId" type="text" placeholder="아이디를 입력하세요." style="width:100%;height:40px;padding:0 12px;font-size:13px;border:1px solid #DADADA;border-radius:6px;outline:none;box-sizing:border-box;background:#fff;color:#1A1A1A;">
+<input id="loginPw" type="password" placeholder="비밀번호를 입력하세요." style="width:100%;height:40px;margin-top:10px;padding:0 12px;font-size:13px;border:1px solid #DADADA;border-radius:6px;outline:none;box-sizing:border-box;background:#fff;color:#1A1A1A;">
+<button type="button" style="align-self:center;margin-top:10px;font-size:11px;color:#8A8A8A;background:none;border:none;text-decoration:underline;cursor:pointer;padding:0;">비회원으로 시작하기</button>
+<button id="loginBtn" type="button" style="width:100%;height:40px;margin-top:16px;border-radius:6px;border:1px solid #DADADA;background:#F2F2F2;color:#3A3A3A;font-size:13.5px;font-weight:600;cursor:pointer;">로그인</button>
+<div style="display:flex;align-items:center;gap:8px;margin-top:22px;">
+<span style="font-size:11px;color:#8A8A8A;">아이디 찾기</span>
+<span style="font-size:11px;color:#DADADA;">|</span>
+<span style="font-size:11px;color:#8A8A8A;">비밀번호 찾기</span>
+<span style="font-size:11px;color:#DADADA;">|</span>
+<button id="goSignup" type="button" style="font-size:11px;color:#8A8A8A;background:none;border:none;cursor:pointer;padding:0;text-decoration:underline;">회원가입</button>
+</div>
+</div>
+
+<div id="screen-terms" style="display:none;flex:1;flex-direction:column;">
+<div style="display:flex;align-items:center;padding:14px 18px 0;"><button class="backBtn" data-to="login" style="background:none;border:none;cursor:pointer;padding:4px;color:#1A1A1A;"><i class="ti ti-arrow-left" style="font-size:20px"></i></button></div>
+<div style="padding:8px 18px 0;"><div style="width:100%;height:3px;border-radius:2px;background:#EDEDED;"><div style="width:20%;height:100%;background:#1A1A1A;border-radius:2px;"></div></div></div>
+<div style="flex:1;padding:20px 22px 0;">
+<p style="font-size:14.5px;line-height:1.5;margin:0 0 20px;"><b>PlacePick</b>의 서비스 이용약관에 동의해주세요</p>
+<div id="termsList"></div>
+<div style="height:1px;background:#EDEDED;margin:14px 0;"></div>
+<label style="display:flex;align-items:center;gap:8px;cursor:pointer;"><input id="allAgree" type="checkbox" style="width:15px;height:15px;accent-color:#3A3A3A;"><span style="font-size:12.5px;font-weight:600;">모두 동의 (선택 정보 포함)</span></label>
+</div>
+<div style="padding:16px 22px 6px;"><button id="agreeBtn" type="button" disabled style="width:100%;height:48px;border-radius:24px;border:none;background:#1A1A1A;color:#fff;font-size:13.5px;font-weight:600;opacity:0.4;">동의하고 가입하기</button></div>
+</div>
+
+<div id="screen-id" style="display:none;flex:1;flex-direction:column;">
+<div style="display:flex;align-items:center;padding:14px 18px 0;"><button class="backBtn" data-to="terms" style="background:none;border:none;cursor:pointer;padding:4px;color:#1A1A1A;"><i class="ti ti-arrow-left" style="font-size:20px"></i></button></div>
+<div style="padding:8px 18px 0;"><div style="width:100%;height:3px;border-radius:2px;background:#EDEDED;"><div style="width:40%;height:100%;background:#1A1A1A;border-radius:2px;"></div></div></div>
+<div style="flex:1;padding:20px 22px 0;">
+<p style="font-size:17px;font-weight:600;line-height:1.4;margin:0 0 22px;">사용할 아이디를<br>입력해주세요.</p>
+<input id="idInput" type="text" placeholder="아이디를 입력하세요." style="width:100%;height:42px;padding:0 12px;font-size:13px;border:1px solid #DADADA;border-radius:6px;outline:none;box-sizing:border-box;">
+</div>
+<div style="padding:16px 22px 6px;"><button id="idNextBtn" type="button" style="width:100%;height:48px;border-radius:24px;border:none;background:#1A1A1A;color:#fff;font-size:13.5px;font-weight:600;">다음</button></div>
+</div>
+
+<div id="screen-password" style="display:none;flex:1;flex-direction:column;">
+<div style="display:flex;align-items:center;padding:14px 18px 0;"><button class="backBtn" data-to="id" style="background:none;border:none;cursor:pointer;padding:4px;color:#1A1A1A;"><i class="ti ti-arrow-left" style="font-size:20px"></i></button></div>
+<div style="padding:8px 18px 0;"><div style="width:100%;height:3px;border-radius:2px;background:#EDEDED;"><div style="width:60%;height:100%;background:#1A1A1A;border-radius:2px;"></div></div></div>
+<div style="flex:1;padding:20px 22px 0;">
+<p style="font-size:17px;font-weight:600;line-height:1.4;margin:0 0 22px;">사용할 비밀번호를<br>입력해주세요.</p>
+<div style="position:relative;"><input id="pwInput" type="password" placeholder="비밀번호를 입력하세요." style="width:100%;height:42px;padding:0 36px 0 12px;font-size:13px;border:1px solid #DADADA;border-radius:6px;outline:none;box-sizing:border-box;"><button id="pwEye" type="button" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:#B0B0B0;cursor:pointer;"><i class="ti ti-eye" style="font-size:16px"></i></button></div>
+<div id="pwTags" style="display:flex;gap:10px;margin-top:8px;font-size:11px;font-weight:600;color:#B0B0B0;"><span id="tagLetter">영문</span><span id="tagNumber">숫자</span><span id="tagLength">8-20자 이내</span></div>
+<div style="position:relative;margin-top:10px;"><input id="pwConfirm" type="password" placeholder="비밀번호를 다시 입력하세요." style="width:100%;height:42px;padding:0 36px 0 12px;font-size:13px;border:1px solid #DADADA;border-radius:6px;outline:none;box-sizing:border-box;"><button id="pwEye2" type="button" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:#B0B0B0;cursor:pointer;"><i class="ti ti-eye" style="font-size:16px"></i></button></div>
+<div id="pwMatch" style="margin-top:8px;font-size:11px;font-weight:600;color:#B0B0B0;display:none;">비밀번호 일치</div>
+</div>
+<div style="padding:16px 22px 6px;"><button id="pwNextBtn" type="button" disabled style="width:100%;height:48px;border-radius:24px;border:none;background:#1A1A1A;color:#fff;font-size:13.5px;font-weight:600;opacity:0.4;">다음</button></div>
+</div>
+
+<div id="screen-phone" style="display:none;flex:1;flex-direction:column;">
+<div style="display:flex;align-items:center;padding:14px 18px 0;"><button class="backBtn" data-to="password" style="background:none;border:none;cursor:pointer;padding:4px;color:#1A1A1A;"><i class="ti ti-arrow-left" style="font-size:20px"></i></button></div>
+<div style="padding:8px 18px 0;"><div style="width:100%;height:3px;border-radius:2px;background:#EDEDED;"><div style="width:80%;height:100%;background:#1A1A1A;border-radius:2px;"></div></div></div>
+<div style="flex:1;padding:20px 22px 0;">
+<p style="font-size:17px;font-weight:600;line-height:1.4;margin:0 0 22px;">휴대폰 본인인증을<br>진행합니다.</p>
+<input type="text" placeholder="이름" style="width:100%;height:42px;padding:0 12px;font-size:13px;border:1px solid #DADADA;border-radius:6px;outline:none;box-sizing:border-box;">
+<input type="text" placeholder="주민등록번호 앞 7자리" style="width:100%;height:42px;margin-top:10px;padding:0 12px;font-size:13px;border:1px solid #DADADA;border-radius:6px;outline:none;box-sizing:border-box;">
+<div style="display:flex;gap:8px;margin-top:10px;"><select style="width:92px;height:42px;border:1px solid #DADADA;border-radius:6px;font-size:13px;"><option>통신사</option><option>SKT</option><option>KT</option><option>LG U+</option></select><input type="tel" placeholder="휴대폰 번호 입력" style="flex:1;height:42px;padding:0 12px;font-size:13px;border:1px solid #DADADA;border-radius:6px;outline:none;box-sizing:border-box;"></div>
+<div id="codeRow" style="display:none;gap:8px;margin-top:14px;align-items:center;"><input type="text" placeholder="인증번호 6자리 입력" style="flex:1;height:42px;padding:0 12px;font-size:13px;border:1px solid #DADADA;border-radius:6px;outline:none;box-sizing:border-box;"><span id="timerText" style="font-size:12px;color:#C0392B;">3:00</span><button type="button" style="height:42px;padding:0 12px;font-size:12px;font-weight:600;border-radius:6px;border:1px solid #DADADA;background:#F2F2F2;color:#3A3A3A;">재전송</button></div>
+</div>
+<div style="padding:16px 22px 6px;"><button id="phoneNextBtn" type="button" style="width:100%;height:48px;border-radius:24px;border:none;background:#1A1A1A;color:#fff;font-size:13.5px;font-weight:600;">다음</button></div>
+</div>
+
+<div id="screen-done" style="display:none;flex:1;flex-direction:column;">
+<div style="display:flex;align-items:center;padding:14px 18px 0;"><div style="width:20px;"></div></div>
+<div style="padding:8px 18px 0;"><div style="width:100%;height:3px;border-radius:2px;background:#1A1A1A;"></div></div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:0 24px;">
+<p style="font-size:15px;margin:0;">반가워요 <b id="doneName">회원</b> 님!</p>
+<div style="width:84px;height:84px;border-radius:50%;background:#1A1A1A;display:flex;align-items:center;justify-content:center;"><i class="ti ti-check" style="font-size:40px;color:#fff"></i></div>
+<p style="font-size:14px;color:#3A3A3A;margin:0;">가입 완료</p>
+</div>
+<div style="padding:16px 22px 6px;"><button id="goHomeBtn" type="button" style="width:100%;height:46px;border-radius:24px;border:1px solid #DADADA;background:#F2F2F2;color:#3A3A3A;font-size:14px;font-weight:600;cursor:pointer;">홈으로 이동하기</button></div>
+</div>
+
+<div id="screen-collect" style="display:none;flex:1;flex-direction:column;align-items:center;justify-content:center;padding:0 28px;gap:24px;">
+<p style="font-size:15px;line-height:1.5;text-align:center;margin:0;">당신의 <b>인생맛집</b>을 소개해주세요!</p>
+<button id="goSearchBtn" type="button" style="width:100%;height:42px;display:flex;align-items:center;gap:8px;padding:0 14px;border:1px solid #DADADA;border-radius:21px;background:#fff;cursor:pointer;"><i class="ti ti-search" style="font-size:15px;color:#B0B0B0"></i><span style="font-size:12.5px;color:#B0B0B0;">음식 종류 또는 식당 이름 검색...</span></button>
+</div>
+
+<div id="screen-search" style="display:none;flex-direction:column;flex:1;">
+<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 16px 0;"><i class="ti ti-menu-2" style="font-size:20px"></i><span style="font-size:15px;font-weight:700;">PlacePick</span><i class="ti ti-bell" style="font-size:20px"></i></div>
+<div style="display:flex;gap:8px;padding:12px 16px 0;"><div style="flex:1;display:flex;align-items:center;gap:8px;height:38px;padding:0 12px;border:1px solid #DADADA;border-radius:19px;background:#FAFAFA;"><i class="ti ti-search" style="font-size:15px;color:#B0B0B0"></i><input id="searchInput" type="text" placeholder="음식 종류 또는 식당 이름 검색..." style="flex:1;border:none;outline:none;background:none;font-size:12.5px;"></div><button style="width:38px;height:38px;border-radius:50%;border:1px solid #DADADA;background:#fff;display:flex;align-items:center;justify-content:center;"><i class="ti ti-current-location" style="font-size:16px"></i></button></div>
+<div id="resultsList" style="flex:1;padding:8px 16px 0;overflow-y:auto;"></div>
+</div>
+
+<div id="sheetOverlay" style="display:none;position:absolute;inset:0;background:rgba(0,0,0,0.35);align-items:flex-end;border-radius:12px;">
+<div style="width:100%;background:#fff;border-top-left-radius:16px;border-top-right-radius:16px;padding:10px 20px 20px;box-sizing:border-box;">
+<div style="width:36px;height:4px;border-radius:2px;background:#DADADA;margin:0 auto 12px;"></div>
+<div style="width:100%;height:96px;border:1px solid #E5E5E5;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><i class="ti ti-photo-x" style="font-size:26px;color:#B4B2A9"></i></div>
+<div style="display:flex;justify-content:space-between;align-items:center;"><p style="font-size:15px;font-weight:700;margin:0;">Lumière Atelier</p><span style="font-size:11.5px;display:flex;align-items:center;gap:3px;"><i class="ti ti-star-filled" style="font-size:12px;"></i> 4.9 (128)</span></div>
+<p style="font-size:11.5px;color:#8A8A8A;margin:4px 0 10px;">Modern French · $$$ · 0.8 km</p>
+<div style="display:flex;gap:8px;margin-bottom:14px;"><span style="font-size:10.5px;font-weight:600;color:#1D9E75;background:#E1F5EE;padding:3px 8px;border-radius:5px;">Open Now</span><span style="font-size:10.5px;font-weight:600;color:#3A3A3A;background:#F2F2F2;padding:3px 8px;border-radius:5px;">🔖 2.4k Saved</span></div>
+<p style="font-size:10.5px;font-weight:700;letter-spacing:0.5px;color:#8A8A8A;margin:0 0 8px;">CHEF'S SELECTION</p>
+<div style="display:flex;gap:8px;margin-bottom:18px;"><div style="width:56px;height:56px;border:1px solid #E5E5E5;border-radius:6px;"></div><div style="width:56px;height:56px;border:1px solid #E5E5E5;border-radius:6px;"></div><div style="width:56px;height:56px;border:1px solid #E5E5E5;border-radius:6px;"></div></div>
+<button id="saveBtn" type="button" style="width:100%;height:46px;border-radius:24px;border:none;background:#1A1A1A;color:#fff;font-size:14px;font-weight:600;">저장하기</button>
+</div>
+</div>
+
+<div id="screen-final" style="display:none;flex:1;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+<i class="ti ti-circle-check" style="font-size:38px;color:#1D9E75"></i>
+<p style="font-size:13px;color:#3A3A3A;">저장 완료! 온보딩이 끝났습니다.</p>
+</div>
+
+<div style="display:flex;justify-content:center;padding:10px 0 14px;"><div style="width:110px;height:4px;border-radius:2px;background:#1A1A1A;"></div></div>
+</div>
+</div>
+
+<script>
+const screens = ['splash','login','terms','id','password','phone','done','collect','search','final'];
+function show(name) {
+  screens.forEach(sc => { const el = document.getElementById('screen-'+sc); if (el) el.style.display = 'none'; });
+  const el = document.getElementById('screen-'+name);
+  el.style.display = name === 'search' ? 'flex' : (el.dataset.flexrow === '1' ? 'flex' : 'flex');
+}
+document.querySelectorAll('.backBtn').forEach(b => b.addEventListener('click', () => show(b.dataset.to)));
+
+document.getElementById('screen-splash').addEventListener('click', () => show('login'));
+setTimeout(() => show('login'), 1600);
+
+document.getElementById('loginBtn').addEventListener('click', () => alert('로그인 데모입니다.'));
+document.getElementById('goSignup').addEventListener('click', () => show('terms'));
+
+const terms = [
+  {key:'age14', label:'만 14세 이상', required:true, viewable:false},
+  {key:'service', label:'이용약관 동의', required:true, viewable:true},
+  {key:'privacy', label:'개인정보 처리방침 동의', required:true, viewable:true},
+  {key:'marketing', label:'광고성 정보 수신 및 마케팅 활용 동의', required:false, viewable:true}
+];
+const termState = {};
+terms.forEach(t => termState[t.key] = false);
+const termsList = document.getElementById('termsList');
+terms.forEach(t => {
+  const row = document.createElement('div');
+  row.style.cssText = 'display:flex;align-items:center;justify-content:space-between;padding:8px 0;';
+  const tag = t.required ? '<span style="color:#3A3A3A;font-weight:600;">[필수]</span>' : '<span style="color:#8A8A8A;font-weight:600;">[선택]</span>';
+  row.innerHTML = `<label style="display:flex;align-items:center;gap:8px;cursor:pointer;"><input type="checkbox" data-key="${t.key}" style="width:15px;height:15px;accent-color:#3A3A3A;"><span style="font-size:12px;color:#3A3A3A;">${tag} ${t.label}</span></label>${t.viewable ? '<span style="font-size:11px;color:#B0B0B0;text-decoration:underline;">보기</span>' : ''}`;
+  termsList.appendChild(row);
+});
+function updateAgreeBtn() {
+  const reqOk = terms.filter(t=>t.required).every(t=>termState[t.key]);
+  const btn = document.getElementById('agreeBtn');
+  btn.disabled = !reqOk; btn.style.opacity = reqOk ? '1' : '0.4';
+  document.getElementById('allAgree').checked = terms.every(t=>termState[t.key]);
+}
+termsList.addEventListener('change', e => { const k = e.target.dataset.key; if (k) { termState[k] = e.target.checked; updateAgreeBtn(); } });
+document.getElementById('allAgree').addEventListener('change', e => {
+  terms.forEach(t => termState[t.key] = e.target.checked);
+  termsList.querySelectorAll('input').forEach(cb => cb.checked = e.target.checked);
+  updateAgreeBtn();
+});
+document.getElementById('agreeBtn').addEventListener('click', () => { if (!document.getElementById('agreeBtn').disabled) show('id'); });
+
+let savedId = '';
+document.getElementById('idInput').addEventListener('input', e => savedId = e.target.value);
+document.getElementById('idNextBtn').addEventListener('click', () => { if (savedId) show('password'); else alert('아이디를 입력해주세요.'); });
+
+function checkPw() {
+  const pw = document.getElementById('pwInput').value;
+  const confirm = document.getElementById('pwConfirm').value;
+  const hasLetter = /[A-Za-z]/.test(pw), hasNumber = /[0-9]/.test(pw), hasLength = pw.length>=8 && pw.length<=20;
+  document.getElementById('tagLetter').style.color = hasLetter ? '#1D9E75' : '#B0B0B0';
+  document.getElementById('tagNumber').style.color = hasNumber ? '#1D9E75' : '#B0B0B0';
+  document.getElementById('tagLength').style.color = hasLength ? '#1D9E75' : '#B0B0B0';
+  const match = confirm.length>0 && pw===confirm;
+  const matchEl = document.getElementById('pwMatch');
+  matchEl.style.display = confirm.length>0 ? 'block' : 'none';
+  matchEl.style.color = match ? '#1D9E75' : '#B0B0B0';
+  const valid = hasLetter && hasNumber && hasLength && match;
+  const btn = document.getElementById('pwNextBtn');
+  btn.disabled = !valid; btn.style.opacity = valid ? '1' : '0.4';
+}
+document.getElementById('pwInput').addEventListener('input', checkPw);
+document.getElementById('pwConfirm').addEventListener('input', checkPw);
+document.getElementById('pwEye').addEventListener('click', () => { const i=document.getElementById('pwInput'); i.type = i.type==='password'?'text':'password'; });
+document.getElementById('pwEye2').addEventListener('click', () => { const i=document.getElementById('pwConfirm'); i.type = i.type==='password'?'text':'password'; });
+document.getElementById('pwNextBtn').addEventListener('click', () => { if (!document.getElementById('pwNextBtn').disabled) show('phone'); });
+
+let codeRequested = false, timerInterval = null, secondsLeft = 180;
+document.getElementById('phoneNextBtn').addEventListener('click', () => {
+  if (!codeRequested) {
+    codeRequested = true;
+    document.getElementById('codeRow').style.display = 'flex';
+    document.getElementById('phoneNextBtn').textContent = '다음';
+    secondsLeft = 180;
+    clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+      secondsLeft = Math.max(0, secondsLeft-1);
+      const m = Math.floor(secondsLeft/60), sec = secondsLeft%60;
+      document.getElementById('timerText').textContent = m+':'+String(sec).padStart(2,'0');
+    }, 1000);
+  } else {
+    clearInterval(timerInterval);
+    document.getElementById('doneName').textContent = savedId || '회원';
+    show('done');
+  }
+});
+
+document.getElementById('goHomeBtn').addEventListener('click', () => show('collect'));
+document.getElementById('goSearchBtn').addEventListener('click', () => show('search'));
+
+const places = [
+  {name:'가게이름', category:'태국음식', address:'경기 의정부시 흥화로190번길 6 호원동2...', review:474, distance:'414m'},
+  {name:'가게이름', category:'태국음식', address:'경기 의정부시 흥화로190번길 6 호원동2...', review:474, distance:'414m'},
+  {name:'가게이름', category:'태국음식', address:'경기 의정부시 흥화로190번길 6 호원동2...', review:474, distance:'414m'}
+];
+function renderResults(list) {
+  const el = document.getElementById('resultsList');
+  el.innerHTML = '';
+  list.forEach(p => {
+    const row = document.createElement('button');
+    row.type = 'button';
+    row.style.cssText = 'width:100%;display:flex;align-items:flex-start;gap:8px;padding:12px 0;border:none;border-bottom:1px solid #F0F0F0;background:none;cursor:pointer;text-align:left;';
+    row.innerHTML = `<i class="ti ti-map-pin" style="font-size:16px;color:#8A8A8A;margin-top:2px;"></i><div style="flex:1;"><p style="font-size:13px;font-weight:600;margin:0 0 2px;">${p.name}</p><p style="font-size:11px;color:#8A8A8A;margin:0 0 2px;">${p.address}</p><p style="font-size:11px;color:#B0B0B0;margin:0;">리뷰 ${p.review}</p></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;"><span style="font-size:11px;font-weight:600;">${p.category}</span><span style="font-size:11px;color:#B0B0B0;">${p.distance}</span></div>`;
+    row.addEventListener('click', () => { document.getElementById('sheetOverlay').style.display = 'flex'; });
+    el.appendChild(row);
+  });
+}
+renderResults(places);
+document.getElementById('searchInput').addEventListener('input', e => {
+  const q = e.target.value.toLowerCase();
+  renderResults(places.filter(p => p.name.toLowerCase().includes(q) || p.category.toLowerCase().includes(q)));
+});
+document.getElementById('saveBtn').addEventListener('click', () => {
+  document.getElementById('sheetOverlay').style.display = 'none';
+  show('final');
+});
+</script>
